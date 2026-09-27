@@ -3,125 +3,204 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Vasishtan K — Senior Paint & Prep Artist, Junior VFX Compositor, Nuke / Silhouette / ComfyUI.">
+<meta name="description" content="Vasishtan K — Team Lead / Senior Paint & Prep Artist, Junior VFX Compositor.">
 <title>VASISHTAN K — VFX Artist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>document.documentElement.className="js";</script>
 <style>
 :root{--bg:#050507;--fg:#f4f4f1;--muted:#92929a;--line:rgba(255,255,255,.1);--card:rgba(255,255,255,.045);--accent:#c9ff4d}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,Arial,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 10%,rgba(201,255,77,.08),transparent 25%),radial-gradient(circle at 15% 55%,rgba(80,100,255,.06),transparent 25%);z-index:-2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 10%,rgba(201,255,77,.08),transparent 25%),radial-gradient(circle at 15% 55%,rgba(80,100,255,.06),transparent 25%);z-index:-2}
 #scene{position:fixed;inset:0;z-index:-1;opacity:.92}#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:20;box-shadow:0 0 18px var(--accent)}
 nav{position:fixed;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:10;background:linear-gradient(180deg,rgba(5,5,7,.9),transparent)}
 .logo{font-family:"Space Grotesk";font-weight:800;letter-spacing:-.05em}.logo span{color:var(--accent)}
 nav a{color:#aaa;text-decoration:none;margin-left:24px;font-size:12px;text-transform:uppercase;letter-spacing:.14em}nav a:hover{color:white}
-main{position:relative}.section{min-height:100vh;padding:150px 8vw;display:flex;align-items:center;position:relative}.wrap{max-width:1250px;width:100%;margin:auto}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}.hero{min-height:100vh;padding-top:100px}.hero h1{font-family:"Space Grotesk";font-size:clamp(58px,11vw,170px);line-height:.83;letter-spacing:-.075em;margin:0;max-width:1100px}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.6)}.hero .sub{font-size:clamp(16px,2vw,24px);color:#bbb;max-width:720px;line-height:1.55;margin-top:42px}.pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.pill{border:1px solid var(--line);border-radius:100px;padding:10px 14px;font-size:12px;color:#ccc;background:rgba(255,255,255,.025)}.cta{display:inline-flex;gap:18px;align-items:center;margin-top:34px;padding:15px 19px;border:1px solid var(--accent);color:#050507;background:var(--accent);font-weight:800;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:.12em}.cta.alt{background:transparent;color:white;border-color:var(--line)}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.col6{grid-column:span 6}.col4{grid-column:span 4}.col8{grid-column:span 8}.col12{grid-column:1/-1}.section h2{font-family:"Space Grotesk";font-size:clamp(42px,7vw,92px);letter-spacing:-.065em;line-height:.92;margin:0 0 30px}.lead{font-size:clamp(18px,2.2vw,28px);line-height:1.45;color:#d6d6d1}.muted{color:var(--muted);line-height:1.7}
-.card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:28px;backdrop-filter:blur(12px);transform:translateY(30px);opacity:0;transition:1s cubic-bezier(.2,.7,.2,1)}.card.visible{transform:none;opacity:1}.card h3{margin:0 0 12px;font-family:"Space Grotesk";font-size:23px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent)}
-.bigstat{font-size:72px;font-family:"Space Grotesk";font-weight:800;letter-spacing:-.07em}.timeline{border-left:1px solid var(--line);padding-left:30px}.timeline article{padding:0 0 45px;position:relative}.timeline article:before{content:"";position:absolute;left:-36px;top:5px;width:9px;height:9px;border:1px solid var(--accent);border-radius:50%;background:var(--bg)}.year{color:var(--accent);font-size:11px;letter-spacing:.18em}.timeline h3{font-size:22px;margin:8px 0}.tool{min-height:230px}.tool .num{font-size:12px;color:#666}.tool h3{font-size:30px}.tool p{color:#aaa;line-height:1.65}.quote{font-family:"Space Grotesk";font-size:clamp(28px,4vw,52px);line-height:1.1;letter-spacing:-.04em;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:45px 0}.footer{min-height:65vh;padding-bottom:80px}.contact{font-family:"Space Grotesk";font-size:clamp(42px,8vw,105px);line-height:.9;letter-spacing:-.07em}.contact a{color:white;text-decoration:none;border-bottom:1px solid var(--accent)}footer{padding:20px 8vw 50px;color:#666;font-size:11px;display:flex;justify-content:space-between}
-.reveal{opacity:0;transform:translateY(35px);transition:1s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
-@media(max-width:800px){nav{padding:0 5vw}nav .links{display:none}.section{padding:110px 6vw;min-height:auto;padding-top:130px;padding-bottom:130px}.hero{min-height:100vh}.grid{display:block}.col6,.col4,.col8{margin-bottom:18px}.hero h1{font-size:20vw}.card{margin-bottom:18px}.bigstat{font-size:56px}}
+main{position:relative}.section{min-height:100vh;padding:150px 8vw;display:flex;align-items:center;position:relative}.wrap{max-width:1250px;width:100%;margin:auto}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.hero{min-height:100vh;padding-top:100px}.hero h1{font-family:"Space Grotesk";font-size:clamp(58px,11vw,170px);line-height:.83;letter-spacing:-.075em;margin:0;max-width:1100px}.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.6)}.hero .sub{font-size:clamp(16px,2vw,24px);color:#bbb;max-width:720px;line-height:1.55;margin-top:42px}
+.pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.pill{border:1px solid var(--line);border-radius:100px;padding:10px 14px;font-size:12px;color:#ccc;background:rgba(255,255,255,.025)}
+.cta{display:inline-flex;gap:18px;align-items:center;margin-top:34px;padding:15px 19px;border:1px solid var(--accent);color:#050507;background:var(--accent);font-weight:800;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:.12em}.cta.alt{background:transparent;color:white;border-color:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.col6{grid-column:span 6}.col4{grid-column:span 4}.col8{grid-column:span 8}.col12{grid-column:1/-1}.col3{grid-column:span 3}
+.section h2{font-family:"Space Grotesk";font-size:clamp(42px,7vw,92px);letter-spacing:-.065em;line-height:.92;margin:0 0 30px}.lead{font-size:clamp(18px,2.2vw,28px);line-height:1.45;color:#d6d6d1}.muted{color:var(--muted);line-height:1.7}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:28px;backdrop-filter:blur(12px)}
+.card h3{margin:0 0 12px;font-family:"Space Grotesk";font-size:23px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);display:block;margin-bottom:10px}
+.bigstat{font-size:72px;font-family:"Space Grotesk";font-weight:800;letter-spacing:-.07em}
+.timeline{border-left:1px solid var(--line);padding-left:30px}.timeline article{padding:0 0 45px;position:relative}.timeline article:before{content:"";position:absolute;left:-36px;top:5px;width:9px;height:9px;border:1px solid var(--accent);border-radius:50%;background:var(--bg)}.year{color:var(--accent);font-size:11px;letter-spacing:.18em}.timeline h3{font-size:22px;margin:8px 0}
+.quote{font-family:"Space Grotesk";font-size:clamp(28px,4vw,52px);line-height:1.1;letter-spacing:-.04em;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:45px 0}
+.footer{min-height:65vh;padding-bottom:80px}.contact{font-family:"Space Grotesk";font-size:clamp(42px,8vw,105px);line-height:.9;letter-spacing:-.07em}.contact a{color:white;text-decoration:none;border-bottom:1px solid var(--accent)}footer{padding:20px 8vw 50px;color:#666;font-size:11px;display:flex;justify-content:space-between}
+
+.js .reveal, .js .card { opacity: 0; transform: translateY(35px); transition: 1s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.js .reveal.visible, .js .card.visible { opacity: 1; transform: none; }
+
+@media(max-width:800px){nav{padding:0 5vw}nav .links{display:none}.section{padding:110px 6vw;min-height:auto;padding-top:130px;padding-bottom:130px}.hero{min-height:100vh}.grid{display:block}.col6,.col4,.col8,.col3{margin-bottom:18px}.hero h1{font-size:20vw}.card{margin-bottom:18px}.bigstat{font-size:56px}}
 </style>
 </head>
 <body>
 <div id="progress"></div><div id="scene"></div>
-<nav><div class="logo">VST<span>.</span>VFX</div><div class="links"><a href="#work">Work</a><a href="#tools">Tools</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></nav>
+<nav><div class="logo">VST<span>.</span>VFX</div><div class="links"><a href="#work">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
 
 <main>
 <section class="section hero" id="top"><div class="wrap reveal">
-<div class="eyebrow">VFX Artist / Paint & Prep / Compositing</div>
+<div class="eyebrow">Team Lead / Senior Paint & Prep Artist • Junior VFX Compositor</div>
 <h1>CRAFTING<br><em>THE FRAME.</em></h1>
-<p class="sub">VASISHTAN K — Senior Paint & Prep Artist • Junior VFX Compositor • Nuke / Silhouette / ComfyUI. 4+ years of feature-film experience, now expanding from frame-level cleanup into production compositing and AI-assisted VFX tools.</p>
-<div class="pillrow"><span class="pill">4+ YEARS VFX</span><span class="pill">NUKE</span><span class="pill">SILHOUETTE</span><span class="pill">COMFYUI</span><span class="pill">TOOL DEVELOPMENT</span></div>
+<p class="sub">VASISHTAN K — Nuke-proficient VFX artist with 4+ years of feature film experience. Built a strong technical foundation through advanced Paint & Prep, now transitioning into compositing and AI automation.</p>
+<div class="pillrow"><span class="pill">NUKE</span><span class="pill">SILHOUETTE</span><span class="pill">COMFYUI</span><span class="pill">PYTHON/BLINK</span><span class="pill">MOCHA</span><span class="pill">AFTER EFFECTS</span></div>
 <a class="cta" href="#work">Explore the work ↓</a>
 </div></section>
 
 <section class="section" id="work"><div class="wrap">
-<div class="eyebrow reveal">01 / What I do</div><h2 class="reveal">FROM CLEAN<br>PLATE TO COMP.</h2>
+<div class="eyebrow reveal">01 / Technical Skills</div><h2 class="reveal">FROM CLEAN<br>PLATE TO COMP.</h2>
 <div class="grid">
-<div class="card col6"><span class="tag">Paint & Prep</span><h3>Frame-level precision</h3><p class="muted">Wire and rig removal, object removal and recreation, plate reconstruction, sequence paint, continuity matching, clean-plate integration and difficult shot cleanup in Nuke and Silhouette.</p></div>
-<div class="card col6"><span class="tag">Compositing</span><h3>Building the next layer</h3><p class="muted">Keying, matte work, tracking and stabilisation, 2D integration, colour matching, multi-layer comp, grain and texture matching — extending an already deep prep foundation into production compositing.</p></div>
-<div class="card col4"><div class="bigstat">4+</div><p class="muted">Years of professional feature-film VFX experience.</p></div>
-<div class="card col4"><div class="bigstat">01</div><p class="muted">Hollywood feature screen credit — <i>Classified</i> (2024).</p></div>
-<div class="card col4"><div class="bigstat">360°</div><p class="muted">Artist + QC + team leadership + pipeline/tool mindset.</p></div>
+<div class="card col6"><span class="tag">Compositing & Nuke</span><h3>Building the next layer</h3><p class="muted">2D integration, keying & matte work, tracking & stabilisation, colour matching, multi-layer comp, clean plate integration, grain & texture matching. Powered by Python/Blink scripting and custom tool creation.</p></div>
+<div class="card col6"><span class="tag">Paint & Prep</span><h3>Frame-level precision</h3><p class="muted">Wire & rig removal, object removal & recreation, plate reconstruction, sequence-level frame-by-frame paint, and multi-frame continuity matching using advanced Nuke and Silhouette workflows.</p></div>
+<div class="card col4"><div class="bigstat">4+</div><p class="muted">Years of feature film VFX experience.</p></div>
+<div class="card col4"><div class="bigstat">01</div><p class="muted">Hollywood screen credit — <i>Classified</i> (2024).</p></div>
+<div class="card col4"><div class="bigstat">QC</div><p class="muted">Team Lead experience ensuring near-zero revision rates.</p></div>
 </div></div></section>
 
 <section class="section"><div class="wrap">
-<div class="grid"><div class="col6 reveal"><div class="eyebrow">02 / The bridge</div><h2>PAINT IS<br>ALREADY<br>COMPOSITING<br>AT THE EDGE.</h2></div>
-<div class="col6"><div class="card reveal"><span class="tag">Compositing readiness</span><h3>Nuke fluency</h3><p class="muted">Daily professional Nuke use across advanced prep, node structures, expressions and 2D workflows gives the transition a technical base rather than a from-zero start.</p></div>
-<div class="card reveal"><span class="tag">Integration eye</span><h3>Colour • edges • continuity</h3><p class="muted">Clean-plate reconstruction and object removal demand accurate colour, edge quality, texture, perspective and seamless integration judgment.</p></div>
-<div class="card reveal"><span class="tag">Production awareness</span><h3>Supervisor perspective</h3><p class="muted">Experience coordinating with compositors, production and client supervisors — understanding shot intent, delivery requirements and what the next department needs.</p></div>
+<div class="grid"><div class="col6 reveal"><div class="eyebrow">02 / Compositing Readiness</div><h2>PAINT IS<br>ALREADY<br>COMPOSITING.</h2></div>
+<div class="col6"><div class="card reveal"><span class="tag">Nuke fluency</span><h3>Expanding Scope</h3><p class="muted">4+ years of daily professional Nuke use. Node structures, expressions, and 2D workflows are not new territory. The transition is expanding scope, not learning from scratch.</p></div>
+<div class="card reveal"><span class="tag">Integration eye</span><h3>Colour & Continuity</h3><p class="muted">Clean plate and object reconstruction work demands the same colour sensitivity, edge-quality awareness, and seamless integration judgment that compositing requires.</p></div>
+<div class="card reveal"><span class="tag">Pipeline experience</span><h3>Supervisor Perspective</h3><p class="muted">Regular coordination with compositors as a Team Lead — understanding shot intent, delivery formats, and exactly what comps need from prep.</p></div>
 </div></div></div></section>
 
-<section class="section" id="tools"><div class="wrap">
-<div class="eyebrow reveal">03 / Tool development</div><h2 class="reveal">I DON'T ONLY<br>USE TOOLS.<br>I BUILD THEM.</h2>
-<p class="lead reveal">Using AI-assisted vibecoding as a development workflow, I am building practical VFX tools and plugins around the applications I use every day.</p>
-<div class="grid" style="margin-top:50px">
-<div class="card tool col4"><span class="num">01</span><span class="tag">SilhouetteFX</span><h3>Roto tools</h3><p>Developing custom tools and plugins for SilhouetteFX to speed up repetitive roto workflows and improve artist usability.</p></div>
-<div class="card tool col4"><span class="num">02</span><span class="tag">Nuke</span><h3>Roto tools</h3><p>Building Nuke-based roto utilities and workflow helpers for faster, cleaner shot handling.</p></div>
-<div class="card tool col4"><span class="num">03</span><span class="tag">Nuke</span><h3>Paint & Prep</h3><p>Developing tools for cleanup, paint, prep and repetitive shot operations — turning recurring artist problems into reusable tools.</p></div>
-<div class="card tool col6"><span class="num">04</span><span class="tag">Nuke / Compositing</span><h3>Comp utilities</h3><p>Experimenting with compositing tools and plugins when a workflow can be made faster, more consistent or easier to control.</p></div>
-<div class="card tool col6"><span class="num">05</span><span class="tag">AI + Vibecoding</span><h3>Human direction × AI acceleration</h3><p>AI is used as a coding partner — generating, iterating and debugging ideas — while the VFX workflow, technical decisions and final validation remain artist-driven.</p></div>
+<section class="section" id="ai"><div class="wrap">
+<div class="eyebrow reveal">03 / AI & Automation</div><h2 class="reveal">VFX × AI<br>PIPELINE<br>INNOVATION.</h2>
+<div class="quote reveal">“Applying AI-generation techniques directly to a production VFX pipeline.”</div>
+<div class="grid" style="margin-top:40px">
+<div class="card col4"><span class="tag">ComfyUI + Nuke</span><h3>Integration</h3><p class="muted">Building a node-based AI pipeline inside Nuke to automate clean-up tasks like wire removal, in-painting, and object reconstruction.</p></div>
+<div class="card col4"><span class="tag">Generative VFX</span><h3>Shot prototyping</h3><p class="muted">Exploring advanced ComfyUI workflows for full-sequence AI image and video generation for pre-vis and scene creation.</p></div>
+<div class="card col4"><span class="tag">Scripting</span><h3>Custom Tools</h3><p class="muted">Self-directed Nuke scripting practice, developing custom tools to accelerate repetitive tasks and demonstrate Nuke scripting depth.</p></div>
 </div></div></section>
 
-<section class="section"><div class="wrap">
-<div class="eyebrow reveal">04 / AI pipeline</div><h2 class="reveal">VFX × AI<br>WITHOUT<br>LOSING THE<br>ARTIST.</h2>
-<div class="quote reveal">“The goal is not to replace the artist. It is to turn repetitive technical work into reusable creative infrastructure.”</div>
-<div class="grid" style="margin-top:40px"><div class="card col4"><span class="tag">ComfyUI</span><h3>In-painting</h3><p class="muted">Exploring AI-assisted object removal, reconstruction and scene cleanup workflows.</p></div><div class="card col4"><span class="tag">Nuke</span><h3>Pipeline integration</h3><p class="muted">Connecting node-based AI workflows with Nuke-based production thinking.</p></div><div class="card col4"><span class="tag">Generative VFX</span><h3>Shot prototyping</h3><p class="muted">Exploring AI image/video generation for pre-vis, shot concepts and production experimentation.</p></div></div>
-</div></section>
-
-<section class="section" id="journey"><div class="wrap">
-<div class="eyebrow reveal">05 / Experience</div><h2 class="reveal">THE PATH.</h2>
+<section class="section" id="experience"><div class="wrap">
+<div class="eyebrow reveal">04 / Experience</div><h2 class="reveal">THE PATH.</h2>
 <div class="timeline">
-<article class="reveal"><span class="year">MAR 2024 — PRESENT</span><h3>Paint & Prep Supervisor • Senior Artist — Singarajan VFX</h3><p class="muted">Lead Paint & Prep artists, set quality benchmarks, perform final QC, coordinate with compositors/production/client supervisors, mentor artists and resolve technical shot issues.</p></article>
-<article class="reveal"><span class="year">APR 2023 — MAR 2024</span><h3>Mid-Level Paint & Prep Artist — Singarajan VFX</h3><p class="muted">Handled technically demanding object removal, surface reconstruction and sequence continuity work; guided a sub-team and contributed workflow improvements.</p></article>
-<article class="reveal"><span class="year">MAY 2022 — MAR 2023</span><h3>Freelance Paint & Prep Artist</h3><p class="muted">Delivered feature and episodic prep independently across Nuke and Silhouette, including shot breakdown, execution, self-QC and delivery.</p></article>
+<article class="reveal"><span class="year">MAR 2024 — PRESENT</span><h3>Team Lead / Senior Paint & Prep Artist — Singarajan VFX</h3><p class="muted">Promoted to supervisory capacity within 2 years based on demonstrated performance. Lead a team of artists, conduct final QC with near-zero revision rates, and act as primary liaison between compositors, production coordinators, and client supervisors. Mentor junior artists and proactively resolve shot-level technical issues.</p></article>
+<article class="reveal"><span class="year">APR 2023 — MAR 2024</span><h3>Mid-Level Paint & Prep Artist — Singarajan VFX</h3><p class="muted">Handled technically demanding shots requiring advanced object removal and multi-frame continuity matching. Guided a small sub-team through complex shot breakdowns, performed internal QC, and assisted in training new hires on Nuke-based prep techniques.</p></article>
+<article class="reveal"><span class="year">MAY 2022 — MAR 2023</span><h3>Freelance Paint & Prep Artist</h3><p class="muted">Delivered Paint & Prep work across multiple feature film and episodic projects, specialising in seamless wire/rig removal. Operated independently across the full prep pipeline—shot breakdown, execution, self-QC, and delivery—while building custom Nuke scripting tools.</p></article>
 </div>
 </div></section>
 
-<section class="section"><div class="wrap">
-<div class="eyebrow reveal">06 / Selected credits & education</div>
+<section class="section" id="projects"><div class="wrap">
+<div class="eyebrow reveal">05 / Projects & Education</div>
 <div class="grid">
-<div class="card col8 reveal"><span class="tag">Feature film</span><h3><i>Classified</i> (2024)</h3><p class="muted">Hollywood feature film. Screen credit: VFX Team. Additional international feature and episodic work remains confidential.</p></div>
-<div class="card col4 reveal"><span class="tag">Education</span><h3>B.Sc. Visual Communication</h3><p class="muted">Thanthai Hans Roever College, Perambalur — Bharathidasan University. Gold Medalist / University Rank 1.</p></div>
-<div class="card col4 reveal"><span class="tag">Postgraduate</span><h3>M.A. Journalism & Mass Communication</h3><p class="muted">SRM University, Chennai.</p></div>
-<div class="card col8 reveal"><span class="tag">Core stack</span><h3>Nuke • Silhouette • Photoshop • Mocha • After Effects • ComfyUI • Python / Blink</h3><p class="muted">Advanced Paint & Prep, 2D integration, keying, tracking, roto, colour matching, scripting and custom tool development.</p></div>
+<div class="card col8 reveal"><span class="tag">Hollywood Feature Film</span><h3><i>Classified</i> (2024)</h3><p class="muted">Amazon MGM Studios. Screen credit: VFX Team. Delivered complex sequence-level paint, plate reconstruction, and object recreation. Additional international feature and episodic work remains confidential.</p></div>
+<div class="card col4 reveal"><span class="tag">Education</span><h3>B.Sc. Visual Communication</h3><p class="muted">Thanthai Hans Roever College (2019-2022). Gold Medalist & Ranked 1st — Bharathidasan University.</p></div>
+<div class="card col4 reveal"><span class="tag">Education</span><h3>M.A. Mass Communication</h3><p class="muted">SRM University, Chennai (2023-2025). Journalism & Mass Communication.</p></div>
+<div class="card col8 reveal"><span class="tag">Soft Skills</span><h3>Leadership & Problem Solving</h3><p class="muted">Known for attention to detail, adaptability, and time management. Entrusted with full supervisory responsibilities at 4 years of total experience—selected for capability, not seniority.</p></div>
 </div></div></section>
 
 <section class="section footer" id="contact"><div class="wrap">
-<div class="eyebrow reveal">07 / Hire me</div><div class="contact reveal">HAVE A SHOT<br>THAT NEEDS<br>TO BE SOLVED?</div>
-<p class="lead reveal" style="max-width:700px;margin-top:35px">For Paint & Prep, cleanup-heavy VFX, junior compositing opportunities, or practical Nuke/Silhouette tool development — let's talk.</p>
-<div class="pillrow reveal"><a class="cta" href="mailto:kvasishtan955@gmail.com">Email me</a><a class="cta alt" href="https://www.linkedin.com/in/vasishtan-k/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="cta alt" href="tel:+917639985377">+91 76399 85377</a></div>
+<div class="eyebrow reveal">06 / Contact</div><div class="contact reveal">LET'S BUILD<br>THE NEXT<br>LAYER.</div>
+<p class="lead reveal" style="max-width:700px;margin-top:35px">Based in Tamil Nadu, India. Open to Compositing and advanced Paint & Prep opportunities.</p>
+<div class="pillrow reveal"><a class="cta" href="mailto:kvasishtan955@gmail.com">Email Me</a><a class="cta alt" href="https://www.linkedin.com/in/vasishtan-k/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="cta alt" href="tel:+917639985377">+91 76399 85377</a></div>
 </div></section>
 </main>
-<footer><span>© VASISHTAN K / VFX ARTIST</span><span>PAINT • PREP • COMP • TOOLS • AI</span></footer>
+<footer><span>© VASISHTAN K / VFX ARTIST</span><span>NUKE • COMFYUI • PAINT & PREP</span></footer>
 
 <script>
-const scene=document.getElementById('scene');
-const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);scene.appendChild(renderer.domElement);
-const camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,1000);camera.position.set(0,0,8);
-const world=new THREE.Group();world.rotation.x=.1;world.rotation.y=-.15;sceneObj=new THREE.Scene();sceneObj.add(world);
-const geo=new THREE.IcosahedronGeometry(2.2,2);
-const mat=new THREE.MeshBasicMaterial({color:0x9dff32,wireframe:true,transparent:true,opacity:.13});
-const orb=new THREE.Mesh(geo,mat);world.add(orb);
-const particles=new THREE.BufferGeometry(), count=900, pos=new Float32Array(count*3);
-for(let i=0;i<count;i++){const r=5+Math.random()*9,a=Math.random()*Math.PI*2,b=Math.acos(2*Math.random()-1);pos[i*3]=r*Math.sin(b)*Math.cos(a);pos[i*3+1]=r*Math.cos(b);pos[i*3+2]=r*Math.sin(b)*Math.sin(a)}
-particles.setAttribute('position',new THREE.BufferAttribute(pos,3));
-const pm=new THREE.PointsMaterial({color:0xffffff,size:.018,transparent:true,opacity:.55});
-world.add(new THREE.Points(particles,pm));
-const rings=[];
-for(let i=0;i<4;i++){let r=new THREE.Mesh(new THREE.TorusGeometry(2.7+i*.55,.006,8,160),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.09}));r.rotation.set(Math.random(),Math.random(),Math.random());world.add(r);rings.push(r)}
-function resize(){camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)}
-addEventListener('resize',resize);
-let targetY=0, currentY=0;
-addEventListener('scroll',()=>{targetY=scrollY/(document.body.scrollHeight-innerHeight)});
-function animate(t){currentY+=(targetY-currentY)*.04;orb.rotation.x=t*.00015+currentY*2;orb.rotation.y=t*.00022-currentY*3;world.rotation.z=currentY*.7;world.position.y=(currentY-.5)*2;world.position.x=Math.sin(currentY*Math.PI*2)*.7;particles.rotation.y=t*.00003;rings.forEach((r,i)=>{r.rotation.x+=.00015*(i+1);r.rotation.y-=.0001*(i+1)});renderer.render(sceneObj,camera);requestAnimationFrame(animate)}
-animate(0);
-const progress=document.getElementById('progress');addEventListener('scroll',()=>progress.style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%');
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal,.card').forEach(e=>io.observe(e));
+document.addEventListener("DOMContentLoaded", function() {
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+        if(progress) progress.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+    });
+
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .card').forEach(e => io.observe(e));
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+window.addEventListener("load", function() {
+    if(typeof THREE === 'undefined') return; 
+    try {
+        const scene = document.getElementById('scene');
+        const renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        scene.appendChild(renderer.domElement);
+        
+        const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 8);
+        
+        const world = new THREE.Group();
+        world.rotation.x = 0.1;
+        world.rotation.y = -0.15;
+        
+        const sceneObj = new THREE.Scene();
+        sceneObj.add(world);
+        
+        const geo = new THREE.IcosahedronGeometry(2.2, 2);
+        const mat = new THREE.MeshBasicMaterial({color: 0x9dff32, wireframe: true, transparent: true, opacity: 0.13});
+        const orb = new THREE.Mesh(geo, mat);
+        world.add(orb);
+        
+        const particles = new THREE.BufferGeometry();
+        const count = 900;
+        const pos = new Float32Array(count * 3);
+        for(let i = 0; i < count; i++){
+            const r = 5 + Math.random() * 9;
+            const a = Math.random() * Math.PI * 2;
+            const b = Math.acos(2 * Math.random() - 1);
+            pos[i*3] = r * Math.sin(b) * Math.cos(a);
+            pos[i*3+1] = r * Math.cos(b);
+            pos[i*3+2] = r * Math.sin(b) * Math.sin(a);
+        }
+        particles.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        const pm = new THREE.PointsMaterial({color: 0xffffff, size: 0.018, transparent: true, opacity: 0.55});
+        world.add(new THREE.Points(particles, pm));
+        
+        const rings = [];
+        for(let i = 0; i < 4; i++){
+            let r = new THREE.Mesh(new THREE.TorusGeometry(2.7 + i * 0.55, 0.006, 8, 160), new THREE.MeshBasicMaterial({color: 0xffffff, transparent: true, opacity: 0.09}));
+            r.rotation.set(Math.random(), Math.random(), Math.random());
+            world.add(r);
+            rings.push(r);
+        }
+        
+        function resize(){
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', resize);
+        
+        let targetY = 0, currentY = 0;
+        window.addEventListener('scroll', () => {
+            let maxScroll = document.body.scrollHeight - window.innerHeight;
+            targetY = maxScroll > 0 ? (window.scrollY / maxScroll) : 0;
+        });
+        
+        function animate(t){
+            currentY += (targetY - currentY) * 0.04;
+            orb.rotation.x = t * 0.00015 + currentY * 2;
+            orb.rotation.y = t * 0.00022 - currentY * 3;
+            world.rotation.z = currentY * 0.7;
+            world.position.y = (currentY - 0.5) * 2;
+            world.position.x = Math.sin(currentY * Math.PI * 2) * 0.7;
+            particles.rotation.y = t * 0.00003;
+            rings.forEach((r, i) => {
+                r.rotation.x += 0.00015 * (i + 1);
+                r.rotation.y -= 0.0001 * (i + 1);
+            });
+            renderer.render(sceneObj, camera);
+            requestAnimationFrame(animate);
+        }
+        animate(0);
+    } catch(e) {
+        console.error("Three.js failed:", e);
+    }
+});
 </script>
 </body>
 </html>
